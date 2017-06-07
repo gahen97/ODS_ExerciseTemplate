@@ -3,8 +3,5 @@ class Model {
   {
   }
 
-  check(userAnswer)
-  {
-    //TODO
-  }
+  check = null;
 }

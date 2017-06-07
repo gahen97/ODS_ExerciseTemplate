@@ -1,7 +1,8 @@
 class Control {
   constructor()
   {
-    this.view = new View();
+    this.eventHandler = new EventHandler();
+    this.view = new View(this.eventHandler);
     this.exercise = new Exercise();
   }
 
@@ -10,6 +11,7 @@ class Control {
     //generates questions
     this.exercise.getQuestions();
 
+    //display instructions
     //generates some answers (gotta make some decides TODO)
 
     //draw maybe?

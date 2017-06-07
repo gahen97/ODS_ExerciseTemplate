@@ -16,9 +16,4 @@ class Exercise {
   {
     return this.questions[queryType];
   }
-
-  generateAnswers(questions)    //TODO either use this ORRR the answer in the questions, probably not both
-  {
-    
-  }
 }

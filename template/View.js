@@ -1,7 +1,8 @@
 class View {
-  constructor()
+  constructor(eventHandler)
   {
-    this.events = new Object{};
+    this.events = new Object{ };
+    this.eventHandler = eventHandler;
   }
 
   bindEvent(event, handler)

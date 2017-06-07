@@ -28,4 +28,6 @@ class Question {
     this.answer = answer;
     return temp;
   }
+
+  setup = null;
 }
