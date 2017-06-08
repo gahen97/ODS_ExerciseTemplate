@@ -3,5 +3,5 @@ class Model {
   {
   }
 
-  check = null;
+  equals = null;
 }

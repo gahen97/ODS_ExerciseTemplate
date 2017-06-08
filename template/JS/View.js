@@ -10,5 +10,4 @@ class View {
     $element.onEvent()
     this.events[event] = handler;
   }
-
 }
