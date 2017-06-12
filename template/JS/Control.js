@@ -1,9 +1,16 @@
 class Control {
   constructor()
   {
-    this.eventHandler = new EventHandler();
+    this.eventHandler = new CustomEventHandler();
     this.view = new View(this.eventHandler);
     //this.exercise = new Exercise(__MODULENAME__questionData);    //QUESTION
+  }
+
+  setup()
+  {
+    //need an array of qtypes for exercise
+    //need an array of questions and a number of questions required for qtypes
+    //
   }
 
   run()

@@ -1,5 +1,5 @@
 class Exercise {
-  constructor (questionType)
+  constructor (questionTypes)
   {
     //array of question types
     this.questionTypes = questionTypes;
