@@ -8,9 +8,7 @@ class Control {
 
   setup()
   {
-    //need an array of qtypes for exercise
-    //need an array of questions and a number of questions required for qtypes
-    //
+    this.exercise.setup();
   }
 
   run()
