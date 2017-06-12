@@ -5,4 +5,8 @@ class dummyQuestionType3 extends QuestionType{
     console.log(a, "I'm drawing3!!");
   }
 
+  check()
+  {
+
+  }
 }

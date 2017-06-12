@@ -16,9 +16,10 @@ class Instructions {
     return temp;
   }
 
+  //associates instruction data with html element id
   display(i)
   {
-    var instructionElement = $(instructionsId + i);
+    var instructionElement = $("#" + instructionsId + i);
     instructionElement.text(    instructionElement.text()
                               + this.getData()              );
   }

@@ -1,16 +1,11 @@
 class Question {
 
-  constructor(instruction)
+  constructor(questionData)
   {
-    //this.question = question  //TODO rename attribute?
-    this.answer = answer;
-    this.instructions = new Instruction(instruction);
-    this.parameters = { };
-  }
-
-  getQuestion()
-  {
-    return this.question;
+    this.answer = questionData.answer || undefined;
+    this.parameters = questionData.parameters || { };
+    this.instructions = questionData.instruction : new Instructions(questionData.instruction) ? null;
+    this.id = id || Question.nextId++;
   }
 
   getAnswer()
@@ -47,5 +42,29 @@ class Question {
     return temp;
   }
 
-  setup = null;
+  getId()
+  {
+    return this.id;
+  }
+
+  static getNextId()
+  {
+    return Question.nextId;
+  }
+
+  static setNextId(i)
+  {
+    var temp = Question.nextId;
+    Question.nextId = i;
+    return temp;
+  }
+
+  setId(i)
+  {
+    var temp = this.id;
+    this.id = i;
+    return temp;
+  }
 }
+
+Question.nextId = 0

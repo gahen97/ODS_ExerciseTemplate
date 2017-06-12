@@ -2,7 +2,7 @@ class Exercise {
   constructor()
   {
     //array of question types
-    this.questionTypes = [];
+    this.questionTypes = [ ];
   }
 
   getQuestionTypes()
@@ -30,13 +30,11 @@ class Exercise {
 
     this.clear();
 
-    //do this as many times as necessary
-    //TODO
-    this.questionTypes.push(new __REPLACE THIS WITH A VALID SUBCLASS OF QUESTION TYPE__(NUMBER OF QUESTION REQD)); //TODO
-    //TODO
+    for (var index in questionTypesClassNames)
+    {
+      this.questionTypes.push(new questionTypesClassNames[index](questionData[index]);
+    }
 
-    this.questionTypes
-    new __VALID SUBCLASS OF QUESTION__();
 
   }
 }
