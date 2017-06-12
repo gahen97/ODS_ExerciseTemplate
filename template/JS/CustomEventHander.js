@@ -1,30 +1,31 @@
 class CustomEventHandler {
   constructor()
   {
-    this.odsEvents = { };
+    this.customEvent = { };
   }
 
   bind(odsEvent, handlingFunction)
   {
-    if (!this.odsEvents[odsEvent])      //if this,events doesn't contain event
+    if (!this.customEvent[odsEvent])      //if this,events doesn't contain event
     {
-      this.odsEvents[odsEvent] = []
+      this.customEvent[odsEvent] = []
     }
-    this.odsEvents[odsEvent].push(handlingFunction);
+    this.customEvent[odsEvent].push(handlingFunction);
   }
 
   unbind(event)
   {
-    this.odsEvents[event] = [ ];
+    this.customEvent[event] = [ ];
   }
 
   trigger(event)
   {
-    var doThis = this.odsEvents[event]
+    var doThis = this.customEvent[event]
     if (doThis)
     {
       for (var i = 0; i < doThis.length; i++) {
-        doThis[i]();
+        Array.prototype.shift.apply(arguments);         //removing the first element of arguments, which is the event itself (original target)
+        doThis[i].apply(this, arguments);
       }
     }
   }

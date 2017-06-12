@@ -3,7 +3,7 @@ class Control {
   {
     this.eventHandler = new EventHandler();
     this.view = new View(this.eventHandler);
-    this.exercise = new Exercise(__MODULENAME__questionData);
+    //this.exercise = new Exercise(__MODULENAME__questionData);    //QUESTION
   }
 
   run()
@@ -32,7 +32,7 @@ class Control {
     //listens for user input
   }
 
-  
+
   bindEvent(event, handler)
   {
     this.view.bindEvent(event, handler);
