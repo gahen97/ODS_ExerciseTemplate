@@ -18,7 +18,7 @@ var questionTypesClassNames = [DummyQuestionType1, DummyQuestionType2, DummyQues
                                       [{class : DummyQuestion2, instructionsText : "do this2" , parameters : {randomNumber : ODSRandom.getRandomIntInclusive(1,10)}}] ,
                                       [{class : DummyQuestion3, instructionsText : "do this3" , parameters : {randomNumber : ODSRandom.getRandomIntInclusive(1,10)}}] ];
   //model
-  var __MODULENAME__ = DUMMY;
+  var __MODULENAME__ = DummyModel;
 
 var numberOfQuestionsRequired = [1,1,3];
 
