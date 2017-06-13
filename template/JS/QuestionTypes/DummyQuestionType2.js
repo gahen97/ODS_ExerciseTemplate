@@ -1,10 +1,10 @@
-class dummyQuestionType2 extends QuestionType{
+class DummyQuestionType2 extends QuestionType{
 
-  draw = function(a)
+  draw(a)
   {
     console.log(a, "I'm drawing2!!");
   }
-  
+
   check()
   {
 

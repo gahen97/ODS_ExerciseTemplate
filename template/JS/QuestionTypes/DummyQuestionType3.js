@@ -1,6 +1,6 @@
-class dummyQuestionType3 extends QuestionType{
+class DummyQuestionType3 extends QuestionType{
 
-  draw = function(a)
+  draw(a)
   {
     console.log(a, "I'm drawing3!!");
   }

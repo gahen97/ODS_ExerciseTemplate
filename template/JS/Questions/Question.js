@@ -4,7 +4,7 @@ class Question {
   {
     this.answer = questionData.answer || undefined;
     this.parameters = questionData.parameters || { };
-    this.instructions = questionData.instruction : new Instructions(questionData.instruction) ? null;
+    this.instructions = questionData.instruction ? new Instructions(questionData.instruction) : null;
     this.id = id || Question.nextId++;
   }
 

@@ -1,4 +1,4 @@
-class dummyQuestionType1 extends QuestionType{
+class DummyQuestionType1 extends QuestionType{
 
   draw(a)
   {

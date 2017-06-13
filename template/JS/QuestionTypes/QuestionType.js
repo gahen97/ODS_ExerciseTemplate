@@ -30,7 +30,7 @@ class QuestionType {
       if (DEBUG) { console.error("From inside QuestionType.setup(), falsy param."); }
       return;
     }
-    
+
     var thisQuestion = null;
     for (index in questionData)
     {
@@ -39,8 +39,8 @@ class QuestionType {
     }
   }
 
-  draw = null;
+  //draw = null;
 
-  check = null;
+  //check = null;
 
 }

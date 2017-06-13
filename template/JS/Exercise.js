@@ -32,7 +32,7 @@ class Exercise {
 
     for (var index in questionTypesClassNames)
     {
-      this.questionTypes.push(new questionTypesClassNames[index](questionData[index]);
+      this.questionTypes.push(new questionTypesClassNames[index](questionData[index]));
     }
 
 
