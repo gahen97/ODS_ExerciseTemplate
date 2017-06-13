@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 class QuestionType {
   constructor(questionData)
   {
@@ -9,12 +11,6 @@ class QuestionType {
   getQuestions()
   {
     return this.questions;
-  }
-
-  //querytype is string
-  getQuestions(queryType)
-  {
-    return this.questions[queryType];
   }
 
   setNumQuestionRequired(n)

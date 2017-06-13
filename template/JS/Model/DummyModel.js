@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 class DummyModel extends Model {
   constructor()
   {
@@ -11,12 +13,13 @@ class DummyModel extends Model {
 
   equals(other)
   {
+    if (other isntanceof DummyModel)
+    {
+
+    }
     for (var index in this.arr)
     {
-      if (other isntanceof DummyModel)
-      {
-        
-      }
+
     }
   }
 

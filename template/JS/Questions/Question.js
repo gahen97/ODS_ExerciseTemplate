@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 class Question {
 
   constructor(questionData)
@@ -67,4 +69,4 @@ class Question {
   }
 }
 
-Question.nextId = 0
+Question.nextId = 0;

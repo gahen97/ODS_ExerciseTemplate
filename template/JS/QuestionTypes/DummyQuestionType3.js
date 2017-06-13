@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 class DummyQuestionType3 extends QuestionType{
 
   draw(a)

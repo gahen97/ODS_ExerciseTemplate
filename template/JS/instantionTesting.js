@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 class ODSRandom {
   constructor()
   {
@@ -145,7 +147,7 @@ class Question {
   }
 }
 
-Question.nextId = 0
+Question.nextId = 0;
 
 
 
@@ -182,12 +184,6 @@ class QuestionType {
   getQuestions()
   {
     return this.questions;
-  }
-
-  //querytype is string
-  getQuestions(queryType)
-  {
-    return this.questions[queryType];
   }
 
   setNumQuestionRequired(n)

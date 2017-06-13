@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 class DOMEventHandler {
   static registerEventHandler (h) {
     this.customEventHandlers.push (h);
