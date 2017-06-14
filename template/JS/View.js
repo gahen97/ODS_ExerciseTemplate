@@ -1,8 +1,10 @@
+/*jshint esversion: 6 */
+
 class View {
   constructor(eventHandler)
   {
     this.events = new Object{ };
-    this.eventHandler = eventHandler;
+    this.customEventHandler = eventHandler;
   }
 
   bindEvent(event, handler)
@@ -10,5 +12,4 @@ class View {
     $element.onEvent()
     this.events[event] = handler;
   }
-
 }
