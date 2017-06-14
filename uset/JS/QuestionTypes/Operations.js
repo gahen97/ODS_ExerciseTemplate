@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-class DummyQuestionType1 extends QuestionType{
+class Operations extends QuestionType{
 
   draw(a)
   {

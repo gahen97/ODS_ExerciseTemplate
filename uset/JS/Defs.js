@@ -14,15 +14,15 @@ var __MODULENAME__questionTypesClassNames = [];
 var __MODULENAME__numberOfQuestionsRequired = [ ];
 */
 
-var questionTypesClassNames = [DummyQuestionType1, DummyQuestionType2, DummyQuestionType3];
+var questionTypesClassNames = [Operations];
 
-  var questionData = [                [{class : DummyQuestion1, instructionsText : "do this1" , parameters : {randomNumber : ODSRandom.getRandomIntInclusive(1,10)}}] ,
-                                      [{class : DummyQuestion2, instructionsText : "do this2" , parameters : {randomNumber : ODSRandom.getRandomIntInclusive(1,10)}}] ,
-                                      [{class : DummyQuestion3, instructionsText : "do this3" , parameters : {randomNumber : ODSRandom.getRandomIntInclusive(1,10)}}] ];
-  //model
-  var __MODULENAME__ = DummyModel;
+  var questionData = [                [{class : Add, instructionsText : "Illustrate the evolution of the collection given the following add method." , parameters : {randomNumber : ODSRandom.getRandomIntInclusive(1,7)}}] ,
+                                      [{class : Remove, instructionsText : "Illustrate the evolution of the collection given the following remove method." , parameters : {randomNumber : ODSRandom.getRandomIntInclusive(1,7)}}] ,
+                                      [{class : Find, instructionsText : "Illustrate the evolution of the collection given the following find method." , parameters : {randomNumber : ODSRandom.getRandomIntInclusive(1,13)}}] ];
+  //modeladd
+  var __MODULENAME__ = Uset;
 
-var numberOfQuestionsRequired = [1,1,3];
+var numberOfQuestionsRequired = [10,10,4];
 
 
 /*load order:
