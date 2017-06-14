@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 6 */ 'use strict';
 
 class Control {
   constructor()
@@ -17,7 +17,7 @@ class Control {
   {
 
     //inserting text for instructions
-    var questionKeys = keys(this.exercise.questions)
+    var questionKeys = keys(this.exercise.questions);
 
     //control tells view to "do instructions"
     //view tells instructions to insert themselves
@@ -35,7 +35,7 @@ class Control {
     //get some answers
 
     //draw maybe?
-    this.view.draw()
+    this.view.draw();
     //listens for user input
   }
 
@@ -49,18 +49,4 @@ class Control {
   onLMBUP(domElement){  }
   onMouseOverON(domElement){  }
   onMouseOverOFF(domElement){  }
-
-  setup(classnamesArr)
-  {
-
-    for (i in classnamesArr) {
-      new window[classnamesArr[i]];
-    }
-    this.exercise.setup();
-    /*
-    this.exercise.setQuestionType([new Operations(20),
-    new Terms (20),
-    new Something (10)])
-    e.g. data */
-  }
 }

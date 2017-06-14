@@ -1,9 +1,9 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 6 */ 'use strict';
 
 class Uset extends Model {
   constructor()
   {
-    this.set = new Object();
+    this.set = { };
     this.n = 0;
   }
 
