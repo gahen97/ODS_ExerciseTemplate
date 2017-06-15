@@ -18,8 +18,6 @@ class Control {
     //instantiate, scramble, generate answer
   }
 
-
-
   onLMBDOWN(domElement){  }
   onLMBUP(domElement){  }
   onMouseOverON(domElement){  }

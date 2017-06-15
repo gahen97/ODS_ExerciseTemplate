@@ -8,6 +8,7 @@ class Question {
     this.instructions = questionData.instruction ? new Instructions(questionData.instruction) : null;
     this.id = questionData.id || Question.nextId++;
     this.div = null;
+    this.answer = new AnswerType();
   }
 
   getInstructions()
@@ -72,7 +73,7 @@ class Question {
 
   displayAnswer()
   {
-    model.display(this.div);
+    this.answer.display(this.div);
   }
 
   //check

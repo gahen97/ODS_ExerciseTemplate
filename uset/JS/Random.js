@@ -11,9 +11,19 @@ class ODSRandom {
     return Math.random();
   }
 
+  getRandom()
+ {
+   return this.addToSavedRNGs(ODSRandom.getRandom());
+ }
+
   static getRandomArbitrary(min, max)
   {
     return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  getRandomArbitrary(min, max)
+  {
+    return this.addToSavedRNGs(ODSRandom.getRandomArbitrary(min, max));
   }
 
   //inclusive min, exclusive max
@@ -24,6 +34,12 @@ class ODSRandom {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
+   getRandomInt(min, max)
+  {
+    return this.addToSavedRNGs(ODSRandom.getRandomInt(min, max));
+  }
+
+
   //inclusive max
   static getRandomIntInclusive(min, max)
   {
@@ -32,11 +48,25 @@ class ODSRandom {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  getRandomIntInclusive(min, max)
+  {
+    return this.addToSavedRNGs(ODSRandom.getRandomIntInclusive(min, max));
+  }
+
   //get random from list
   static getRandomFromArray(arr)
   {
     return arr[ODSRandom.getRandomIntInclusive(0,arr.length-1)];
   }
 
+  getRandomFromSaved()
+  {
+    return ODSRandom.getRandomFromArray(this.savedRNGs);
+  }
 
+  addToSavedRNGs(i)
+  {
+    this.savedRNGs.push(i);
+    return i;
+  }
 }
