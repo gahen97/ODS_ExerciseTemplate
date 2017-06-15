@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 6 */ 'use strict';
 
 class QuestionType {
   constructor(questionData)
@@ -20,7 +20,7 @@ class QuestionType {
     return temp;
   }
 
-  setup(questionData)
+  setup(questionData, numQuestionsArr)
   {
     if (!questionData) {      //param checking
       if (DEBUG) { console.error("From inside QuestionType.setup(), falsy param."); }
@@ -28,15 +28,16 @@ class QuestionType {
     }
 
     var thisQuestion = null;
-    for (index in questionData)
+    for (var index in questionData)
     {
-      thisQuestion = questionData[index];
-      this.questions.push(new thisQuestion.class(thisQuestion));
+        for (var i = 0; i < numQuestionsArr[index]; i++)
+        {
+          thisQuestion = questionData[index];
+          this.questions.push(new thisQuestion.class(thisQuestion));
+        }
     }
   }
 
   //draw = null;
-
-  //check = null;
 
 }

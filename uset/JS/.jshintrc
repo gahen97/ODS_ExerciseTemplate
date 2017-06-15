@@ -1,0 +1,30 @@
+{
+  "devel": true,
+  "jquery":true,
+  "globals": {
+      "$": true,
+      "CustomEventHandler" : true,
+      "View" : true,
+      "keys" : true,
+      "questions" : true,
+      "ODSRandom" : true,
+      "__MODULENAME__" : true,
+      "console" : true,
+      "questionTypesClassNames" : true,
+      "questionData" : true,
+      "numberOfQuestionsRequired" : true,
+      "Model" : true,
+      "Uset" : true,
+      "Model" : true,
+      "Question" : true,
+      "Instructions" : true,
+      "instructionsId" : true,
+      "QuestionType" : true,
+      "Add" : true,
+      "Remove" : true,
+      "Find" : true,
+      "Operations" : true,
+      "DEBUG" : true
+  },
+  "strict": "global"
+}

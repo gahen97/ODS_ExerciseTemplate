@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 6 */ 'use strict';
 
 class Question {
 
@@ -7,7 +7,7 @@ class Question {
     this.answer = questionData.answer || undefined;
     this.parameters = questionData.parameters || { };
     this.instructions = questionData.instruction ? new Instructions(questionData.instruction) : null;
-    this.id = id || Question.nextId++;
+    this.id = questionData.id || Question.nextId++;
   }
 
   getAnswer()
@@ -25,11 +25,6 @@ class Question {
   getInstructions()
   {
     return this.instructions;
-  }
-
-  displayInstructions()
-  {
-    this.getInstructions().display();
   }
 
   getParameters()
@@ -67,6 +62,8 @@ class Question {
     this.id = i;
     return temp;
   }
+
+  //check
 }
 
 Question.nextId = 0;

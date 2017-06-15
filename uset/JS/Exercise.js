@@ -1,10 +1,11 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 6 */ 'use strict';
 
 class Exercise {
   constructor()
   {
     //array of question types
     this.questionTypes = [ ];
+    this.model = new __MODULENAME__();
   }
 
   getQuestionTypes()
@@ -34,7 +35,7 @@ class Exercise {
 
     for (var index in questionTypesClassNames)
     {
-      this.questionTypes.push(new questionTypesClassNames[index](questionData[index]));
+      this.questionTypes.push(new questionTypesClassNames[index](questionData[index]), numberOfQuestionsRequired[index]);
     }
 
 

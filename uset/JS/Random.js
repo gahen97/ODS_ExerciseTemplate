@@ -1,8 +1,9 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 6 */ 'use strict';
 
 class ODSRandom {
   constructor()
   {
+    this.savedRNGs = [ ];
   }
 
    static getRandom()
@@ -30,4 +31,12 @@ class ODSRandom {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+
+  //get random from list
+  static getRandomFromArray(arr)
+  {
+    return arr[ODSRandom.getRandomIntInclusive(0,arr.length-1)];
+  }
+
+
 }
