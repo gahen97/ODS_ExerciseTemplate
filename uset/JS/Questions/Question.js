@@ -4,22 +4,10 @@ class Question {
 
   constructor(questionData)
   {
-    this.answer = questionData.answer || undefined;
     this.parameters = questionData.parameters || { };
     this.instructions = questionData.instruction ? new Instructions(questionData.instruction) : null;
     this.id = questionData.id || Question.nextId++;
-  }
-
-  getAnswer()
-  {
-    return this.answer;
-  }
-
-  setAnswer(answer)
-  {
-    var temp = this.answer;
-    this.answer = answer;
-    return temp;
+    this.div = null;
   }
 
   getInstructions()
@@ -38,9 +26,6 @@ class Question {
     this.parameters = param;
     return temp;
   }
-
-  getId()
-  {
     return this.id;
   }
 
@@ -61,6 +46,33 @@ class Question {
     var temp = this.id;
     this.id = i;
     return temp;
+  }
+
+  getDiv() { return this.div; }
+
+  setDiv(div)
+  {
+    var temp = this.div;
+    this.div = div;
+    return temp;
+  }
+
+  display(div)
+  {
+    this.setDiv(div);
+
+    var questionText = this.constructor.name;
+
+    questionText = questionText.charAt(0).toLowerCase() + questionText.substring(1);
+
+    $(".questionSpan",div).text(questionText);
+
+    this.instructions.display(div);
+  }
+
+  displayAnswer()
+  {
+    model.display(this.div);
   }
 
   //check

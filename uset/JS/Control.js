@@ -3,9 +3,9 @@
 class Control {
   constructor()
   {
-    this.eventHandler = new CustomEventHandler();
-    this.view = new View(this.eventHandler);
-    //this.exercise = new Exercise(__MODULENAME__questionData);    //QUESTION
+    this.exercise = new Exercise();
+    this.customEventHandler = new CustomEventHandler();
+    this.setup();
   }
 
   setup()
@@ -15,35 +15,10 @@ class Control {
 
   run()
   {
-
-    //inserting text for instructions
-    var questionKeys = keys(this.exercise.questions);
-
-    //control tells view to "do instructions"
-    //view tells instructions to insert themselves
-
-
-
-    //TODO specify questions
-
-    this.exercise.displayInstructions(questions);
-
-
-
-
-    //select some questions
-    //get some answers
-
-    //draw maybe?
-    this.view.draw();
-    //listens for user input
+    //instantiate, scramble, generate answer
   }
 
 
-  bindEvent(event, handler)
-  {
-    this.view.bindEvent(event, handler);
-  }
 
   onLMBDOWN(domElement){  }
   onLMBUP(domElement){  }
