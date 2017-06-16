@@ -1,11 +1,11 @@
 /*jshint esversion: 6 */ 'use strict';
 
 class QuestionType {
-  constructor(questionData)
+  constructor(questionData, numQuestionsArr)
   {
     this.questions = [ ];
-    this.numQuestionsRequired = 0;
-    this.setup(questionData);
+    this.model = new __MODULENAME__();
+    this.setup(questionData, numQuestionsArr);
   }
 
   getQuestions()
@@ -37,6 +37,20 @@ class QuestionType {
         }
     }
   }
+
+  //randomizeOrder = null
+
+  scrambleQuestionOrder() {
+    var array = this.question;
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = ODSRandom.getRandomIntInclusive(0, i);
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
 
   //draw = null;
 

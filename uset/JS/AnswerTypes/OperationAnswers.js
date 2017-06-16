@@ -1,7 +1,9 @@
 /*jshint esversion: 6 */ 'use strict';
 
-class Answer {
+class OperationAnswer extends AnswerType {
   constructor()
   {
+
   }
+
 }

@@ -24,7 +24,8 @@
       "Remove" : true,
       "Find" : true,
       "Operations" : true,
-      "DEBUG" : true
+      "DEBUG" : true,
+      "eventHandler": true
   },
   "strict": "global"
 }
